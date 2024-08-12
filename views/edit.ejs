@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheet/style3.css">
+</head>
+<body>
+    <div class="ticket">
+        <img id="display" src="">
+        <div class="form">
+            <form action="/update/<%= user._id %>" method="POST">
+                <input type="text" name="name" value="<%=user.name%>">
+                <input type="text" name="email" value="<%= user.email %>">
+                <input type="text" name="image" id="image" value="<%= user.image %>">
+                <input type="submit" value="Update">
+            </form>
+        </div>
+    </div>
+    <script src="/javascript/script1.js"></script>
+    
+</body>
+</html>

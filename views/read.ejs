@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./stylesheet/style2.css">
+</head>
+<body>
+    <a class="homebtn" href="/">home page</a>
+    <% if(users.length>0){ %>
+    <% users.forEach(element => { %>
+        <div class="ticket">
+            <img src="<%= element.image %>">
+            <h5><%=element.name%></h5>
+            <h5><%=element.email%></h5>
+            <a href="/edit/<%= element._id%>">Edit</a>
+            <a href="/delete/<%=element._id%>">Delete</a>
+        </div>
+    <% })}else{ %>
+        <h3>no pictures saved yet</h3>
+       <% }%>
+    
+</body>
+</html>
